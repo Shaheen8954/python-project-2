@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Run container') {
             steps {
-                docker run -d -p 9001:9001 python-project
+               sh "docker run -d -p 9001:9001 python-project"
             }
         }
     }
