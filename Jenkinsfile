@@ -1,10 +1,11 @@
+@Library("Shared") _
 pipeline {
     agent any
 
     stages {
         stage('Clone repo') {
             steps {
-                git url: "https://github.com/Shaheen8954/python-project-2.git", branch: "main"
+                clone()
             }
         }
         stage('Build image') {
